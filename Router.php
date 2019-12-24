@@ -21,7 +21,9 @@ class Router {
         $actionController = $dataController['action'];
 
         include $pathController;
+        // createcontroller object by class
         $Controller = new $nameController();
+        // execute controller function by name
         $Controller->$actionController();
     }
 }
