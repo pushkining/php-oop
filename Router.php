@@ -6,8 +6,13 @@ class Router {
 
     public function __construct(){
         include './routes.php';
+        $pathInfo = $_SERVER['PATH_INFO'];
+
+        if(!$pathInfo) {
+            $pathInfo = '/';
+        }
         // path from user url, example '/gallery'
-        $this->path = $_SERVER['REQUEST_URI'];
+        $this->path = $pathInfo;
 
         // array from routes.php
         $this->routes = $dataRoutes;

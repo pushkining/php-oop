@@ -1,0 +1,1 @@
+<h1>Hello post in money_format</h1>
